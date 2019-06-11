@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone = "no"?>
+<!DOCTYPE MyDocs SYSTEM "filename.dtd"
+    [ <!ENTITY coname "Rabid Turtle Industries"]>
+
+<!-- XML Schema Definition (XSD) to describe and validate the structure and the content of XML data-->
+<xs:element name = "Address">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name = "name" type = "xs:string" />
+            <xs:element name = "company" type = "xs:string" />
+            <xs:element name = "phone" type = "xs:int" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!--XML elements-->
+<contact-info>
+    <name>Polina Lemenkova</name>
+    <address category = "residence">
+        <company>OUC</company>
+        <place>Qingdao</place>
+        <phone>+00-00000-000</phone>
+        <country>P.R.C.</country>
+    </address>
+</contact-info>
+
+<!--this is an XML comment-->
+<garden>
+    <plants category = "flowers"/>
+    <plants category = "trees"/>
+    <plants category = "shrubs">
+    </plants>
+</garden>
+
+<!--Flower typse are below-->
+<flower_list>
+    <flower>
+        <name>Rose</name>
+        <color>red</color>
+        <color>yellow</color>
+        <color>pink</color>
+    </flower>
+</flower_list>
+
+<!--Template-->
+<root>
+    <x>foo</x>
+    <y>bar</y>
+    <z>Document Elements are the building blocks of XML.</z>
+</root>
+<a b = "x" c = "y" b = "z">Attribute names are defined without quotation marks, whereas attribute values must always appear in quotation marks. Some French letters: &aacute;, &ugrave;. This is &quot;quotation mark&quot; This is a number 34</a>
+<a href = "http://www.tutorialspoint.com/">Tutorialspoint!</a>
+
+<recipe type="dessert">
+    <recipename cuisine="american" servings="1">&apos;Ice Cream Sundae&apos;</recipename>
+    <message>
+        <text>Hello, world!</text>
+    </message>
+    <ingredlist>
+        <listitem><quantity units="cups">0.5</quantity>
+            <itemdescription>vanilla ice cream</itemdescription></listitem>
+        <listitem><quantity units="tablespoons">3</quantity>
+            <itemdescription>chocolate syrup or chocolate fudge</itemdescription></listitem>
+        <listitem><quantity units="tablespoons">1</quantity>
+            <itemdescription>nuts</itemdescription></listitem>
+        <listitem><quantity units="each">1</quantity>
+            <itemdescription>cherry</itemdescription></listitem>
+    </ingredlist>
+    <utensils>
+        <listitem><quantity units="each">1</quantity>
+            <utensilname>bowl</utensilname></listitem>
+        <listitem><quantity units="each">1</quantity>
+            <utensilname>spoons</utensilname></listitem>
+        <listitem><quantity units="each">1</quantity>
+            <utensilname>ice cream scoop</utensilname></listitem>
+    </utensils>
+    <directions>
+        <step>Using ice cream scoop, place vanilla ice cream into bowl.</step>
+        <step>Drizzle chocolate syrup &amp; chocolate fudge over the ice cream.</step>
+        <step>Sprinkle nuts over the mound of chocolate and ice cream.</step>
+        <step>Place cherry on top of mound with stem pointing upward.</step>
+        <step>Serve.</step>
+    </directions>
+    <variations>
+        <option>Replace nuts with raisins.</option>
+        <option>Use chocolate ice cream instead of vanilla ice cream.</option>
+    </variations>
+    <preptime>5 minutes</preptime>
+</recipe>
+
